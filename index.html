@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Notícias Uber e Correlatas - Portal Preto</title>
+  <meta name="description" content="Fique por dentro das últimas notícias sobre Uber e serviços correlatos, vídeos exclusivos e anúncios regionais em um portal com fundo preto e design moderno." />
+  <meta name="keywords" content="Uber, Notícias Uber, Transporte por aplicativo, Notícias ES, Vídeos Uber, Propagandas regionais" />
+  <meta name="author" content="Portal Regional Uber" />
+
+  <!-- Open Graph para compartilhamento -->
+  <meta property="og:title" content="Notícias Uber e Correlatas - Portal Preto" />
+  <meta property="og:description" content="Fique atualizado com as notícias mais recentes sobre Uber e serviços correlatos no Espírito Santo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seuportaluber.com" />
+  <meta property="og:image" content="https://seuportaluber.com/imagens/uber-og.jpg" />
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 120px; /* Espaço para propaganda fixa */
+    }
+    header {
+      text-align: center;
+      padding: 20px 10px;
+      border-bottom: 2px solid #ffd700;
+      width: 100%;
+      max-width: 900px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 6px;
+    }
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+      font-style: italic;
+    }
+    main {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px 10px;
+    }
+    article {
+      background-color: #111;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #444;
+      transition: box-shadow 0.3s ease;
+    }
+    article:hover {
+      box-shadow: 0 0 15px #ffd700;
+    }
+    article h2 {
+      color: #ffd700;
+      margin-bottom: 8px;
+      font-size: 1.5rem;
+    }
+    article p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #ddd;
+    }
+    /* Vídeo e título */
+    #videoSection {
+      max-width: 700px;
+      width: 100%;
+      margin: 30px auto;
+      text-align: center;
+    }
+    #videoTitle {
+      color: #ffd700;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ffd700;
+    }
+    /* Conteúdo único */
+    #uniqueString {
+      font-family: monospace;
+      margin: 30px auto 60px auto;
+      max-width: 700px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      color: #00ffcc;
+      white-space: pre-wrap;
+      box-shadow: 0 0 10px #00ffcc;
+      user-select: text;
+      text-align: center;
+    }
+    /* Propaganda fixa inferior piscante */
+    #adFooter {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffd700;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px 10px;
+      box-shadow: 0 -3px 10px #ffd700;
+      animation: blink 1.5s infinite;
+      z-index: 10000;
+      flex-wrap: wrap;
+    }
+    #adFooter a {
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      background-color: #fff3b0;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    #adFooter a:hover {
+      background-color: #ffd700;
+      color: #000;
+      text-decoration: underline;
+    }
+    @keyframes blink {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.6;}
+    }
+    @media (max-width: 600px) {
+      #videoTitle {
+        font-size: 1.2rem;
+      }
+      iframe {
+        height: 250px;
+      }
+      #adFooter {
+        font-size: 0.9rem;
+        gap: 8px;
+        padding: 10px 5px;
+      }
+      #adFooter a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Notícias Uber e Correlatas</h1>
+    <p>As últimas atualizações do transporte por aplicativo no Brasil e ES</p>
+  </header>
+
+  <main id="newsContainer" aria-live="polite" aria-label="Lista de notícias Uber e correlatas">
+    <!-- Notícias serão inseridas aqui via JS -->
+  </main>
+
+  <section id="videoSection" aria-label="Vídeo relacionado">
+    <div id="videoTitle">Carregando título do vídeo...</div>
+    <iframe id="ytVideo" title="Vídeo do YouTube sobre Uber" allowfullscreen></iframe>
+  </section>
+
+  <section id="uniqueString" aria-label="Conteúdo exclusivo único">
+    Carregando conteúdo único...
+  </section>
+
+  <!-- Propaganda fixa no rodapé -->
+  <footer id="adFooter" aria-label="Anúncios patrocinados">
+    <!-- Links populados por JS -->
+  </footer>
+
+  <script>
+    // URLs das propagandas
+    const adUrls = [
+      {url:"https://wa.me/5527999497001", texto:"SEGURO REGIONAL E CONSÓRCIOS"},
+      {url:"https://geocredibnkvitoria.com/", texto:"💰 Crédito rápido em Vitória"},
+      {url:"https://central.dokehost.com.br/aff.php?aff=90", texto:"Hospedagem profissional ES"},
+      {url:"https://hostinger.com.br", texto:"Crie seu site com desconto!"},
+      {url:"https://jogosantigos472302513.wordpress.com/", texto:'Jogos antigos'},
+      {url:"https://www.instagram.com/reel/DHoqFcwRH7x/", texto:'Problema capilar? Veja isso!'}
+    ];
+
+    // Notícias simuladas Uber e correlatas
+    const noticias = [
+      {
+        titulo: "Uber lança nova função de segurança para passageiros",
+        texto: "A Uber anunciou um novo recurso que permite aos passageiros compartilhar sua rota em tempo real com contatos confiáveis para maior segurança."
+      },
+      {
+        titulo: "Demanda por serviços de transporte por app cresce no ES",
+        texto: "Com a retomada das atividades, o Espírito Santo registra aumento expressivo na utilização de aplicativos de transporte."
+      },
+      {
+        titulo: "Motoristas de aplicativo no ES discutem melhores condições",
+        texto: "Em assembleia recente, motoristas reivindicam melhorias nas taxas e maior suporte das plataformas."
+      },
+      {
+        titulo: "Aplicativos de carona solidária ganham espaço no Brasil",
+        texto: "Alternativas colaborativas ao transporte individual vêm atraindo usuários interessados em economia e sustentabilidade."
+      }
+    ];
+
+    // Vídeos do YouTube (id + título)
+    const videos = [
+      { id: "HtT-iD25Sew", titulo: "Monark falando merda" },
+      {id:"L7YV0hJgJBA",titulo:"como ficar como femboy "},
+      {id:"MP2XGOVgJD0",titulo:"uber vai mudar por causa disso!"}
+
+    ];
+
+    // Função para criar as notícias no DOM
+    function carregarNoticias() {
+      const container = document.getElementById("newsContainer");
+      noticias.forEach(noticia => {
+        const article = document.createElement("article");
+        const h2 = document.createElement("h2");
+        h2.textContent = noticia.titulo;
+        const p = document.createElement("p");
+        p.textContent = noticia.texto;
+        article.appendChild(h2);
+        article.appendChild(p);
+        container.appendChild(article);
+      });
+    }
+
+    // Função para carregar vídeo random
+    function carregarVideoRandom() {
+      const escolhido = videos[Math.floor(Math.random() * videos.length)];
+      const iframe = document.getElementById("ytVideo");
+      iframe.src = `https://www.youtube.com/embed/${escolhido.id}?rel=0&autoplay=1&mute=1`;
+      document.getElementById("videoTitle").textContent = escolhido.titulo;
+    }
+
+    // Função para gerar texto único random
+    function gerarTextoUnico(tamanho = 300) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*()_+-=[]{}|;:,.<>?';
+      let texto = '';
+      for(let i=0; i < tamanho; i++) {
+        texto += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("uniqueString").textContent = texto;
+    }
+
+    // Função para popular rodapé com links de anúncios randomizados
+    function popularAnuncios() {
+      const footer = document.getElementById("adFooter");
+      footer.innerHTML = ''; // limpa os anúncios anteriores
+
+      const numeroAnuncios = 4; // quantidade de anúncios exibidos
+      const anunciosCopy = [...adUrls];
+
+      // Embaralhar array (Fisher-Yates)
+      for (let i = anunciosCopy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [anunciosCopy[i], anunciosCopy[j]] = [anunciosCopy[j], anunciosCopy[i]];
+      }
+
+      // Pega os primeiros n anúncios
+      const anunciosSelecionados = anunciosCopy.slice(0, numeroAnuncios);
+
+      anunciosSelecionados.forEach(item => {
+        const a = document.createElement("a");
+        a.href = item.url;
+        a.textContent = item.texto;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.title = item.texto;
+        footer.appendChild(a);
+      });
+    }
+
+    // Inicialização da página
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarNoticias();
+      carregarVideoRandom();
+      gerarTextoUnico();
+      popularAnuncios();
+    });
+  </script>
+</body>
+</html>
